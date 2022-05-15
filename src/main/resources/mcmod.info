@@ -4,7 +4,7 @@
   "name": "EnviroMine",
   "description": "Adds more realism to Minecraft with environmental effects, physics, gases and a cave dimension.",
   "version": "${version}",
-  "mcversion": "${mcversion}",
+  "mcversion": "1.7.10",
   "url": "https://enviromine.wordpress.com/",
   "updateUrl": "",
   "authorList": ["Funwayguy", "TimbuckTato", "GenDeathrow", "thislooksfun"],
