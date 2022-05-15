@@ -1,6 +1,5 @@
 package enviromine.items;
 
-import enviromine.handlers.EnviroAchievements;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemDye;
 import net.minecraft.item.ItemFood;
@@ -19,7 +18,6 @@ public class RottenFood extends ItemFood
     {
         super.onFoodEaten(stack, world, player);
         
-        player.addStat(EnviroAchievements.tenSecondRule, 1);
     }
 
     /**

@@ -280,7 +280,6 @@ public class EM_EventManager
 				
 				if(val >= 5)
 				{
-					player.addStat(EnviroAchievements.mindOverMatter, 1);
 				}
 			}
 
@@ -519,7 +518,6 @@ public class EM_EventManager
 			
 			if(stack.getItem() == Items.name_tag && stack.getDisplayName().toLowerCase().equals("siyliss"))
 			{
-				event.entityPlayer.addStat(EnviroAchievements.ironArmy, 1);
 			}
 		}
 		
@@ -574,7 +572,6 @@ public class EM_EventManager
 								}
 								
 								player.addChatMessage(new ChatComponentText("An eerie shiver travels down your spine"));
-								player.addStat(EnviroAchievements.ohGodWhy, 1);
 							}
 						}
 					}
@@ -1059,7 +1056,6 @@ public class EM_EventManager
 			{
 				if(event.entityLiving.worldObj.getTotalWorldTime() - event.entityLiving.getEntityData().getLong("EM_SAFETY") >= 1000L)
 				{
-					((EntityPlayer)event.entityLiving).addStat(EnviroAchievements.funwaysFault, 1);
 				}
 			}
 			
@@ -1067,7 +1063,6 @@ public class EM_EventManager
 			{
 				if(event.entityLiving.worldObj.getTotalWorldTime() - event.entityLiving.getEntityData().getLong("EM_THAT") >= 1000L)
 				{
-					((EntityPlayer)event.entityLiving).addStat(EnviroAchievements.thatJustHappened, 1);
 				}
 			}
 			
@@ -1089,7 +1084,6 @@ public class EM_EventManager
 				{
 					if(event.entityLiving.worldObj.getTotalWorldTime() - event.entityLiving.getEntityData().getLong("EM_WINTER") > 24000L * 7)
 					{
-						((EntityPlayer)event.entityLiving).addStat(EnviroAchievements.winterIsComing, 1);
 						event.entityLiving.getEntityData().removeTag("EM_WINTER");
 					}
 				} else
@@ -1106,7 +1100,6 @@ public class EM_EventManager
 				event.entityLiving.getEntityData().setBoolean("EM_BOILED", true);
 			} else if(event.entityLiving.getEntityData().getBoolean("EM_BOILED") && !event.entityLiving.isPotionActive(EnviroPotion.heatstroke))
 			{
-				((EntityPlayer)event.entityLiving).addStat(EnviroAchievements.hardBoiled, 1);
 				event.entityLiving.getEntityData().removeTag("EM_BOILED");
 			} else if(event.entityLiving.getEntityData().hasKey("EM_BOILED"))
 			{
@@ -1126,7 +1119,6 @@ public class EM_EventManager
 				
 				if(event.entityLiving.getDistance(x, y, z) >= 250)
 				{
-					((EntityPlayer)event.entityLiving).addStat(EnviroAchievements.itsPitchBlack, 1);
 				}
 			} else if(event.entityLiving.getEntityData().hasKey("EM_PITCH"))
 			{
@@ -1155,7 +1147,6 @@ public class EM_EventManager
 					
 					if(time > 24000L * 3L)
 					{
-						((EntityPlayer)event.entityLiving).addStat(EnviroAchievements.proMiner, 1);
 					}
 				} else
 				{

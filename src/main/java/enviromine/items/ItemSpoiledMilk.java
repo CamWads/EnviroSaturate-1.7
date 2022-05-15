@@ -1,7 +1,6 @@
 package enviromine.items;
 
 import enviromine.core.EnviroMine;
-import enviromine.handlers.EnviroAchievements;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
@@ -33,7 +32,6 @@ public class ItemSpoiledMilk extends Item
         	player.addPotionEffect(new PotionEffect(Potion.hunger.id, 600, 1));
         }
         
-        player.addStat(EnviroAchievements.tenSecondRule, 1);
 
         return stack.stackSize <= 0 ? new ItemStack(Items.bucket) : stack;
     }

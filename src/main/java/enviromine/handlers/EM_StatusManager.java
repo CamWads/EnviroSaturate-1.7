@@ -571,7 +571,6 @@ public class EM_StatusManager
 							sBoost = 5F;
 						}
 						
-						((EntityPlayer)entityLiving).addStat(EnviroAchievements.tradingFavours, 1);
 					} else if(villager.getProfession() == 0 && isDay) // Farmer
 					{
 						if(tracker.hydration < 50F)
@@ -586,7 +585,6 @@ public class EM_StatusManager
 							villager.playSound("mob.villager.yes", 1.0F, 1.0F);
 							villager.getEntityData().setLong("Enviro_Assist_Time", worldTime);
 							
-							((EntityPlayer)entityLiving).addStat(EnviroAchievements.tradingFavours, 1);
 						}
 					} else if(villager.getProfession() == 4 && isDay) // Butcher
 					{
@@ -598,7 +596,6 @@ public class EM_StatusManager
 							villager.playSound("mob.villager.yes", 1.0F, 1.0F);
 							villager.getEntityData().setLong("Enviro_Assist_Time", worldTime);
 							
-							((EntityPlayer)entityLiving).addStat(EnviroAchievements.tradingFavours, 1);
 						}
 					}
 				}

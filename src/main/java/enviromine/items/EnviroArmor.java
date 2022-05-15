@@ -1,6 +1,5 @@
 package enviromine.items;
 
-import enviromine.handlers.EnviroAchievements;
 import enviromine.handlers.ObjectHandler;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
@@ -169,7 +168,6 @@ public class EnviroArmor extends ItemArmor //implements ITextureProvider, IArmor
 			{
 				armor.getTagCompound().setBoolean("isCamelPack", true);
 			}
-			player.addStat(EnviroAchievements.keepYourCool, 1);
 		} else if (armor.getItem() == ObjectHandler.gasMask)
 		{
 			if (!armor.hasTagCompound())
@@ -178,10 +176,8 @@ public class EnviroArmor extends ItemArmor //implements ITextureProvider, IArmor
 			}
 			armor.getTagCompound().setInteger("gasMaskFill", 1000);
 			armor.getTagCompound().setInteger("gasMaskMax", 1000);
-			player.addStat(EnviroAchievements.breatheEasy, 1);
 		} else if (armor.getItem() == ObjectHandler.hardHat)
 		{
-			player.addStat(EnviroAchievements.safetyFirst, 1);
 		} else
 		{
 		}

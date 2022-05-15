@@ -15,7 +15,6 @@ import enviromine.client.gui.EM_GuiFakeDeath;
 import enviromine.core.EM_Settings;
 import enviromine.core.EnviroMine;
 import enviromine.handlers.EM_StatusManager;
-import enviromine.handlers.EnviroAchievements;
 import enviromine.trackers.EnviroDataTracker;
 import enviromine.utils.RenderAssist;
 
@@ -132,7 +131,6 @@ public class EnviroPotion extends Potion
 						
 						if(entityLiving instanceof EntityPlayer)
 						{
-							((EntityPlayer)entityLiving).addStat(EnviroAchievements.iNeededThat, 1);
 						}
 					}
 				}

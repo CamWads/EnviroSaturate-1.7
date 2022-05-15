@@ -29,7 +29,6 @@ import enviromine.core.commands.CommandPhysics;
 import enviromine.core.commands.EnviroCommand;
 import enviromine.core.commands.QuakeCommand;
 import enviromine.core.proxies.EM_CommonProxy;
-import enviromine.handlers.EnviroAchievements;
 import enviromine.handlers.EnviroShaftCreationHandler;
 import enviromine.handlers.ObjectHandler;
 import enviromine.handlers.Legacy.LegacyHandler;
@@ -110,8 +109,6 @@ public class EnviroMine
 		EnviroUtils.extendPotionList();
 		
 		EnviroPotion.RegisterPotions();
-		
-		EnviroAchievements.InitAchievements();
 		
 		caves = (BiomeGenCaves)(new BiomeGenCaves(EM_Settings.caveBiomeID).setColor(0).setBiomeName("Caves").setDisableRain().setTemperatureRainfall(1.0F, 0.0F));
 		//GameRegistry.addBiome(caves);

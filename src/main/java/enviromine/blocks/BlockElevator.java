@@ -19,7 +19,6 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 import enviromine.blocks.tiles.TileEntityElevator;
 import enviromine.core.EM_Settings;
-import enviromine.handlers.EnviroAchievements;
 import enviromine.handlers.ObjectHandler;
 import enviromine.handlers.TeleportHandler;
 
@@ -129,15 +128,9 @@ public class BlockElevator extends Block implements ITileEntityProvider
 		if(player.dimension == EM_Settings.caveDimID)
 		{
 			player.setLocationAndAngles((double)i + 0.5D, j - 1 + meta, (double)k + 0.5D, player.rotationYaw, player.rotationPitch);
-			player.addStat(EnviroAchievements.intoTheDarkness, 1);
 			
 			if(player.getEntityData().hasKey("EM_CAVE_DIST"))
 			{
-				if(player.getEntityData().getIntArray("EM_CAVE_DIST")[3] >= 1000)
-				{
-					player.addStat(EnviroAchievements.intoTheDarkness, 1);
-				}
-				
 				player.getEntityData().removeTag("EM_CAVE_DIST");
 			}
 			
@@ -157,7 +150,6 @@ public class BlockElevator extends Block implements ITileEntityProvider
 		} else if(player.dimension == 0)
 		{
 			player.setLocationAndAngles((double)i + 0.5D, j - 1 + meta, (double)k + 0.5D, player.rotationYaw, player.rotationPitch);
-			player.addStat(EnviroAchievements.boreToTheCore, 1);
 			player.getEntityData().setIntArray("EM_CAVE_DIST", new int[]{i, j, k, 0});
 			playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, EM_Settings.caveDimID, TeleportHandler.GetInstance(playerMP.mcServer.worldServerForDimension(EM_Settings.caveDimID)));
 			//world.setBlockToAir(i, j, k);
